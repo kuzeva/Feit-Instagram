@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-header>
+        <div mat-card-avatar [sec]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7F_BJjsWyR0l7HcPpq1MY-bilaVokpX0vsD_9oSy2S2xxsj-x&s">
+        <mat-card-title >Dora</mat-card-title>
+        <matcard-subtitle>@the_explorer</matcard-subtitle>
+    </mat-card-header>
+
+    <p>This is the bio for the user</p>
+
+    <mat-card-footer>
+        <mat-grid-list cols="3" rowHight="3:3">
+
+            <mat-grid-tile *ngFor="let tile of tiles"
+            [colspan]="tile.cols" [rowspan]="tile.rows">
+            </mat-grid-tile>
+
+        </mat-grid-list>
+    </mat-card-footer>
+</mat-card>

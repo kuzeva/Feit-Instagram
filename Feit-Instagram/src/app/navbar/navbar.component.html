@@ -1,6 +1,20 @@
-<mat-toolbar>
+<mat-toolbar color="">
     <mat-toolbar-row>
-        <h3>Feit-Instagram</h3>
+        <a routerLink="['/']"> <span>
+            <mat-icon aria-hidden="false" aria-label="Logo" svgIcon="instagram">
+            </mat-icon> &nbsp; | Feit Instagram
+        </span> </a>
+        
+        <span clas="spacer"></span>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="search" [(ngModel)]="searchText">
+            <mat-icon aria-label="search-bar" aria-hidden="false" svgIcon="search"></mat-icon>
+          </div>
+
+        <mat-icon-button aria-label="Settings icon">
+            <mat-icon>Settings</mat-icon>
+        </mat-icon-button>  
         
     </mat-toolbar-row>
 </mat-toolbar>

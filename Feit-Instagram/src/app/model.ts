@@ -15,3 +15,10 @@ class PostComment{
     photoUrl : string;
     comment : string;
 }
+
+class Users{
+    
+    fullname : string;
+    username : string;
+    
+}

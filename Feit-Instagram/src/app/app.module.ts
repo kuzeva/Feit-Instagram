@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import {MatButtonModule, MatDialog, MatDialogModule} from '@angular/material';
+import {MatButtonModule,} from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
@@ -14,6 +14,10 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 
 
+
+import {MatDialogModule} from '@angular/material/dialog'; 
+
+import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 
 
@@ -36,6 +40,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSidenavModule,
     MatFormFieldModule,
     MatDialogModule,
+    MatGridListModule,
   ],
   providers: [],
   entryComponents: [PostComment,CommentsComponent],
