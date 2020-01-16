@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FeitInstagramApiService } from '../feit-instagram-api.service';
 
+
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
@@ -13,7 +14,7 @@ export class CommentsComponent implements OnInit {
   newComment : PostComment;
 
   constructor( public dialogRef : MatDialogRef <CommentsComponent>,
-    @Inject(MAT_DIALOG_DATA) public data : DialogData ,
+    @Inject(MAT_DIALOG_DATA) public data : any ,
     private apiService : FeitInstagramApiService) 
     {
       this.newComment= {
