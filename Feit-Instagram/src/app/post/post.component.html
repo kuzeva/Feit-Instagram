@@ -1,25 +1,33 @@
 <mat-card class="card "  >
     <mat-card-header >
-      <div mat-card-avatar class="post-profileImg" ></div>
+      <div mat-card-avatar class = "post-profileImg" ></div>
       <mat-card-title >{{name}}</mat-card-title>
       <mat-card-subtitle>{{userName}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="mainImage" alt="Photo" >
+
+    <img mat-card-image [src]="mainImg" alt="Photo" >
+
+    <mat-card-actions>
+      <mat-icon class ="heart-icon" svgIcon="heart-icon" (click)="numberOfLikes()" ></mat-icon>
+     <a routerLink="/comments">
+       <mat-icon class="comment-icon" svgIcon="comment-icon"></mat-icon>
+         
+      </a>
+
+    </mat-card-actions>
+   
+
     <mat-card-content>
-        <mat-card-actions>
-            <mat-icon class ="like-icon" id={{id}} svgIcon="favorite_border" (click)="numberOfLikes()" [disabled]="disabled"></mat-icon>
-           <a routerLink="/comments">
-             <mat-icon class="comment-icon" svgIcon="mode_comment"></mat-icon>
-                </mat-card-actions>
-            </a>
-       
+     <div>
+       {{numberLikes}}
       <p>
         {{description}}
       </p>
       
+    </div>
       
     </mat-card-content>
-   
+    
   </mat-card>
 <br>
 <br>

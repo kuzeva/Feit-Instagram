@@ -10,8 +10,8 @@ export class FeitInstagramApiService {
 
   constructor(private http : HttpClient) { }
 
-  getPosts(pageNumber: number):Observable<Post[]>{
-    return this.http.get<Post[]>(`https://http://5e1dce7df846e500144d608f.mockapi.io/Post`)
+  getPosts():Observable<Post[]>{
+    return this.http.get<Post[]>(`https://5e1dce7df846e500144d608f.mockapi.io/Post`)
   }
 
   getPostComments(postId: number):Observable<PostComment[]>{
@@ -21,5 +21,10 @@ export class FeitInstagramApiService {
   postComment(postId: number, comment: PostComment){
     return this.http
     .post(`http://5df115fd9df6fb00142bd818.mockapi.io/api/posts/${postId}/postComments`, comment);
+  }
+
+  getImages(mainImg)
+  {
+    return this.images;
   }
 }
