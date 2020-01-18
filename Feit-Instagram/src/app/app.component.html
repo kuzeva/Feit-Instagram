@@ -1,16 +1,13 @@
 <app-navbar></app-navbar>
 
-<mat-sidenav-container *ngIf="shouldRun">
+<mat-sidenav-container>
 
-     <mat-sidenav opened>
-
-       <app-user-details></app-user-details>
-     </mat-sidenav>
+     <mat-sidenav opened mode ="side">
+      <app-user-details></app-user-details>   
+    </mat-sidenav>
 
      <mat-sidenav-content>
-     <div *ngFor="let post of posts ; index as id">
-       <app-post style="margin:auto" [mainImg]="post.mainImg" [name]="post.name" [userName]="post.userName" [description]="post.description" [routerLink]="['/posts',id]"></app-post>
-     </div>
-     </mat-sidenav-content>
+       <app-post-list></app-post-list>   
+    </mat-sidenav-content>
 </mat-sidenav-container>
 

@@ -1,16 +1,16 @@
-<mat-toolbar color="warn" class="name-text">
+<mat-toolbar class="name-text">
     <mat-toolbar-row>
         <a routerLink="['/']"> <span><mat-icon area-hidden="false" aria-label="Instagram icon" svgIcon="instagram"></mat-icon> &nbsp;   Feit Instagram  </span> </a>
         <span class="spacer"></span>
         
         <div class="search-bar">
-            <input type="text" placeholder="search" [(ngModel)]="searchText">
-            <mat-icon>search-bar</mat-icon>
+            <input type="text" placeholder="    search" [(ngModel)]="searchText" style="margin-right: 4px;">
+            
           </div>
-          
+          <mat-icon style="padding-top:10px;margin-right: 10px;">search-bar</mat-icon>
         
           <a routerLink="/settings">
-        <button mat-icon-button aria-label="Settings icon" >
+        <button mat-icon-button aria-label="Settings icon" class="margin">
             <mat-icon>settings</mat-icon>
         </button>
           </a>

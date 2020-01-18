@@ -17,12 +17,17 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 
 import {MatDialogModule} from '@angular/material/dialog'; 
 
+
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { SettingsComponent } from './settings/settings.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostListComponent } from './post-list/post-list.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 
 
 
@@ -33,7 +38,8 @@ import { RouterModule } from '@angular/router';
     PostComponent,
     CommentsComponent,
     UserDetailsComponent,
-    SettingsComponent
+    SettingsComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
@@ -52,11 +58,14 @@ import { RouterModule } from '@angular/router';
     MatSlideToggleModule,
     RouterModule.forRoot([
       {path: 'post' , component : PostComponent },
+      {path: 'comments' , component : CommentsComponent},
       {path: 'settings' , component: SettingsComponent},
       {path: 'user-details' , component: UserDetailsComponent},
     ]),
-    MatInputModule
-
+    MatInputModule,
+    BrowserAnimationsModule,
+    ScrollingModule,
+    
   ],
   providers: [],
   entryComponents: [PostComponent,CommentsComponent,UserDetailsComponent],

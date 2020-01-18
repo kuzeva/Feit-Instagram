@@ -67,6 +67,7 @@ export class PostComponent implements OnInit {
     this.numberLikes = this.numberLikes+1;
     this.disabled = "true";
     
+    
 
     return this.numberLikes;
   }
