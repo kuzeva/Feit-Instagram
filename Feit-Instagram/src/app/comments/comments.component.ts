@@ -19,9 +19,9 @@ export class CommentsComponent implements OnInit {
     {
       this.newComment= {
         id: this.data.clickedPost.id,
-        fullName : '',
-        accountName: '',
-        photoUrl :'',
+        fullName : 'Dora',
+        accountName: '@the_explorer',
+        photoUrl :'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7F_BJjsWyR0l7HcPpq1MY-bilaVokpX0vsD_9oSy2S2xxsj-x&s',
         comment: '',
 
       };

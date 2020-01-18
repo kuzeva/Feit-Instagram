@@ -4,9 +4,10 @@
       <mat-card-title >{{name}}</mat-card-title>
       <mat-card-subtitle>{{userName}}</mat-card-subtitle>
     </mat-card-header>
-
-    <mat-card-image [src]="mainImg" alt="Photo" >
-
+    
+    <img mat-card-image [src]="mainImg" alt="Photo" >
+    
+    
     <mat-card-actions>
       <mat-icon class ="heart-icon" svgIcon="heart-icon" (click)="numberOfLikes()" ></mat-icon>
      <a routerLink="/comments">
@@ -27,7 +28,7 @@
     </div>
       
     </mat-card-content>
-    
-  </mat-card>
+</mat-card>  
+
 <br>
 <br>

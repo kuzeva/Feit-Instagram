@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import {MatButtonModule,} from '@angular/material';
+import {MatButtonModule, MatSlideToggleModule, MatInputModule,} from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
@@ -18,7 +18,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDialogModule} from '@angular/material/dialog'; 
 
 import {MatGridListModule} from '@angular/material/grid-list'; 
-import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { SettingsComponent } from './settings/settings.component'; 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -28,11 +32,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     NavbarComponent,
     PostComponent,
     CommentsComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
@@ -41,9 +47,19 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatFormFieldModule,
     MatDialogModule,
     MatGridListModule,
+    MatButtonModule,
+    HttpClientModule,
+    MatSlideToggleModule,
+    RouterModule.forRoot([
+      {path: 'post' , component : PostComponent },
+      {path: 'settings' , component: SettingsComponent},
+      {path: 'user-details' , component: UserDetailsComponent},
+    ]),
+    MatInputModule
+
   ],
   providers: [],
-  entryComponents: [PostComment,CommentsComponent],
+  entryComponents: [PostComponent,CommentsComponent,UserDetailsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
