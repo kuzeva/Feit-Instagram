@@ -15,12 +15,13 @@ export class PostComponent implements OnInit {
 
   @Input() id : number;
   @Input() name : string;
-  @Input() userName : string;
+  @Input() user_name : string;
   @Input() profileImg : string;
   @Input() mainImg : string;
   @Input() description : string;
   @Input() numberLikes : string;
   @Input() post : Post[]=[];
+  @Input() postt:Post;
 
   disabled :string;
 
@@ -43,9 +44,9 @@ export class PostComponent implements OnInit {
        );
        
 
-        this.apiService.getPosts().subscribe((receivedPosts)=>{
-          this.post=receivedPosts;
-        });
+        // this.apiService.getPosts().subscribe((receivedPosts)=>{
+        //   this.post=receivedPosts;
+        // });
     }
 
   
@@ -62,14 +63,32 @@ export class PostComponent implements OnInit {
       });
   }
 
-  numberOfLikes()
+  addLike()
   {
+
     this.numberLikes = this.numberLikes+1;
-    this.disabled = "true";
+    this.add();
+
+
+    
     
     
 
-    return this.numberLikes;
+    
+  }
+  add(){
+    var post = {
+      "id": this.id,
+      "name" : this.name,
+      "user_name" : this.user_name,
+      "profileImg" : this.profileImg,
+      "mainImg" : this.mainImg,
+      "description" : this.description,
+      "numberLikes" : this.numberLikes
+    }
+    this.apiService.updatePost(post,this.postt.id).subscribe((res)=>{
+      console.log("Liked");
+    });
   }
 
   ngOnInit() {

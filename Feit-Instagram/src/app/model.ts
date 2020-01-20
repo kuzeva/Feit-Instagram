@@ -1,7 +1,7 @@
 class Post{
     id : number;
     name : string;
-    userName : string;
+    user_name : string;
     profileImg : string;
     mainImg : string;
     description : string;
@@ -21,4 +21,10 @@ class Users{
     fullname : string;
     username : string;
     
+}
+
+class Tile{
+    photoUrl : string;
+    cols : number;
+    rows : number;
 }

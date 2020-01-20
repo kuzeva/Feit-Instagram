@@ -36,7 +36,7 @@ export class CommentsComponent implements OnInit {
        this.apiService.postComment(this.data.clickedPost.id, this.newComment)
        .subscribe(()=> {console.log("Posted new comment");
       });
-
+      console.log(this.data.clickedPost.id)
       this.newComment.comment= '';
      }
 

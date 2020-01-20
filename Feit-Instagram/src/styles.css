@@ -54,7 +54,6 @@ a {
 }
 
 .post-profileImg {
-    background-image: url('https://peopledotcom.files.wordpress.com/2019/04/julian-assange-cat.jpg');
     background-size: cover;
   }
   .settings-text{
@@ -80,7 +79,7 @@ a {
   }
   .comment-icon{
     color:black;
-    margin-bottom: 10px;
+    
   }
 
   .quote{

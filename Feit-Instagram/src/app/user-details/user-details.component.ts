@@ -1,10 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-export interface Tile{
-  photoUrl : string;
-  cols : number;
-  rows : number;
-}
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-user-details',
@@ -14,6 +8,7 @@ export interface Tile{
 
 
 export class UserDetailsComponent implements OnInit {
+  
 
   tiles : Tile[] =[
     {photoUrl: 'https://imgix.bustle.com/2015/11/8/_DORA.jpg?w=960&h=540&fit=crop&crop=faces&auto=format&q=70',cols : 1, rows : 1},
@@ -24,6 +19,7 @@ export class UserDetailsComponent implements OnInit {
     {photoUrl: 'https://ae01.alicdn.com/kf/HTB1PXUPbo_rK1Rjy0Fcq6zEvVXa1/5D-DIY-Full-Diamond-Painting-Mosaic-Cartoon-Dora-The-Explorer-decoration-Diamond-rhinestone-embroidery-cross-stitch.jpg' , cols : 1 , rows: 1}
 
   ];
+  
   constructor() { }
 
   ngOnInit() {

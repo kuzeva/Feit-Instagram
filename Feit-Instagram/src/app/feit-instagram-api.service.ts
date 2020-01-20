@@ -22,7 +22,11 @@ export class FeitInstagramApiService {
     return this.http
     .post(`http://5df115fd9df6fb00142bd818.mockapi.io/api/posts/${postId}/postComments`, comment);
   }
-
+  updatePost(post:Post,postId:number){
+    
+    return this.http.put(`https://5e1dce7df846e500144d608f.mockapi.io/Post/${postId}`,post);
+    
+  }
   getImages(mainImg)
   {
     return this.images;
