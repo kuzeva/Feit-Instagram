@@ -5,49 +5,47 @@
         <mat-card-title >Dora</mat-card-title>
         <mat-card-subtitle>@the_explorer</mat-card-subtitle>
     </mat-card-header>
-
-    <p>This is the bio for the user</p>
+    <mat-card-content>
+        <p class="textColor">Hi, my name is Dora and I love exploring the world. Join my adventures</p>
+        <br>
+        <div class="textColor">Adventure blog</div>
+        
+        <div class="textColor">This is my <a href="https://en.wikipedia.org/wiki/Dora_the_Explorer#Dora_the_Explorer_merchandise" style="text-decoration-color: lightslategrey; font-style: italic;">webpage.</a></div>
+        
+    </mat-card-content>
+    
+    
 
 
     
     <mat-card-footer>
         <mat-grid-list cols="3" rowHight="3:3">
-            <div *ngFor="let tile of tiles">
-            <mat-grid-tile 
-            [colspan]="tile.cols" [rowspan]="tile.rows">
-            </mat-grid-tile>
-            </div>
-        </mat-grid-list>
-    </mat-card-footer>
-    
-        <!-- <mat-grid-list cols=3 rowHight="40px" role="list">
 
-            <mat-grid-tile role="listitem" >
-                <img src='https://imgix.bustle.com/2015/11/8/_DORA.jpg?w=960&h=540&fit=crop&crop=faces&auto=format&q=70' >
-            </mat-grid-tile>
-            
-            <mat-grid-list role="listitem" >
+            <mat-grid-tile >
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn_vmqdSzzeBzMq8nxcn7rKfZHxcy9BSnYvkX1Q8fW_1jRVTod&s'>
-            </mat-grid-list>
+            </mat-grid-tile>
 
-            <mat-grid-tile role="listitem" >
+            <mat-grid-tile >
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwagcyO3rSy34ukjF9lA4NyBhoZeei3tZ_ZpF2_xwA7avRkGhF&s'>
             </mat-grid-tile>
 
-            <mat-grid-tile role="listitem" >
+            <mat-grid-tile >
                 <img src='http://static1.shop033.com/resources/67/3687/picture/40/15935040.jpg'>
             </mat-grid-tile>
 
-            <mat-grid-list role="listitem" >
-                <img src='http://images.nickjr.com/nickjr/promos/video/dora-the-explorer/106-cheering-for-the-train-16x9.jpg?quality=0.60'>
-            </mat-grid-list>
+            <mat-grid-tile >
+                <img src='https://imgix.bustle.com/2015/11/8/_DORA.jpg?w=960&h=540&fit=crop&crop=faces&auto=format&q=70'>
+            </mat-grid-tile>
 
-            <mat-grid-tile role="listitem">
+            <mat-grid-tile >
+                <img src='http://images.nickjr.com/nickjr/promos/video/dora-the-explorer/106-cheering-for-the-train-16x9.jpg?quality=0.60'>
+            </mat-grid-tile>
+
+            <mat-grid-tile >
                 <img src='https://ae01.alicdn.com/kf/HTB1PXUPbo_rK1Rjy0Fcq6zEvVXa1/5D-DIY-Full-Diamond-Painting-Mosaic-Cartoon-Dora-The-Explorer-decoration-Diamond-rhinestone-embroidery-cross-stitch.jpg'>
             </mat-grid-tile>
-        </mat-grid-list> -->
-            
-
-        
+              
+        </mat-grid-list>
+    </mat-card-footer>
     
 </mat-card>

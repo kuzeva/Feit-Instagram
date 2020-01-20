@@ -1,3 +1,4 @@
-mat-grid-tile {
-    background-color: grey;
+.textColor{
+    text-decoration-color: lightslategray;
+    font-style: italic;
 }
